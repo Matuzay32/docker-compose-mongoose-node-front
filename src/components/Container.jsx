@@ -6,7 +6,8 @@ export default function Container({ children, linksHeader, linksFooter }) {
   return (
     <Fragment>
       <Header links={linksHeader}></Header>
-      {children}
+      <section className="cardSection">{children}</section>
+
       <Footer links={linksFooter}></Footer>
     </Fragment>
   );

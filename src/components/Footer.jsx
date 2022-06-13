@@ -34,12 +34,6 @@ export default function Footer({ links }) {
           }
         })}
       </ul>
-      <div>
-        <p>
-          Terms of Service Privacy Policy Cookie Policy Accessibility Ads info
-          More © 2022 photo web, Inc.
-        </p>
-      </div>
     </footer>
   );
 }

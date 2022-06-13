@@ -160,6 +160,13 @@ header > ul > li :hover {
 }
 
 /* Cards STYLES */
+.cardSection {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 .contenedorCard {
   width: 300px;
   padding: 3rem;
@@ -282,16 +289,4 @@ footer > ul > li > a {
   font-family: "Lato", sans-serif;
   font-size: large;
   font-weight: 500;
-}
-footer > div {
-  align-self: flex-end;
-  z-index: -10;
-  width: 30%;
-  padding: 35px;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  color: #fff;
-  font-weight: 500;
-  transform: translateY(10px);
 }

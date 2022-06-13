@@ -12,6 +12,11 @@ export default function App() {
     <>
       <Container linksHeader={linksHeader} linksFooter={linksFooter}>
         <Cards></Cards>
+        <Cards></Cards>
+        <Cards></Cards>
+        <Cards></Cards>
+        <Cards></Cards>
+        <Cards></Cards>
       </Container>
     </>
   );
