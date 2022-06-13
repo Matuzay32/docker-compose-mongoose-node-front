@@ -16,10 +16,8 @@ export default function Header({ links }) {
         })}
       </ul>
 
-      {/* <div className="contenedorInputSearch"> */}
       <input className="inputSearch" type="search" placeholder="Search..." />
       <button className="buttonSearch">Search</button>
-      {/* </div> */}
     </header>
   );
 }
