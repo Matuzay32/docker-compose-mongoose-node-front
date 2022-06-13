@@ -40,6 +40,21 @@
 
   --cardButtonColorHover: rgb(255, 255, 255);
   --cardButtonBgHover: rgb(255, 128, 0);
+
+  /* Footer footer variables  */
+  --footerfooterBg: rgb(136, 136, 136);
+  /* ul Footer  variables */
+  --ulFooterBg: rgb(136, 136, 136);
+  /* li Footer  variables */
+  --liFooterBg: rgba(0, 0, 0, 0.754);
+  --liHeaderBoxShadow: 0px 0px 16px 0px rgba(78, 77, 77, 0.8);
+  --liHeaderColor: #ffff;
+  /* Hover Footer  li variables */
+  --liFooterBgHover: rgb(255, 128, 0);
+  --liFooterBoxShadowHover: 0px 0px 16px 0px rgba(78, 77, 77, 0.8);
+  --liFooterColorHover: rgb(46, 46, 46);
+  /* a Footer footer variables */
+  --aFooterColor: #ffff;
 }
 /* Header  */
 .header {
@@ -215,4 +230,69 @@ h4 {
   border-radius: 0.25rem;
   padding: 10px;
   align-self: center;
+}
+
+/* Footer Section */
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: var(--footerfooterBg);
+  display: flex;
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+footer > ul {
+  width: 30%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer > ul > li {
+  color: white;
+  width: 150px;
+  height: 50px;
+  margin-left: 10px;
+  background-color: var(--liFooterBg);
+  box-shadow: var(--liFooterBoxShadowHover);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+footer > ul > li:hover {
+  color: var(--liFooterColorHover);
+  background-color: var(--liFooterBgHover);
+  transition: background-color 3s, color 4s;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  font-weight: 500;
+}
+footer > ul > li > a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: large;
+  font-weight: 500;
+}
+footer > div {
+  align-self: flex-end;
+  z-index: -10;
+  width: 30%;
+  padding: 35px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-weight: 500;
+  transform: translateY(10px);
 }
