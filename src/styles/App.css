@@ -236,12 +236,11 @@ h4 {
 footer {
   width: 100%;
   height: 200px;
+  margin-bottom: 0;
   background-color: var(--footerfooterBg);
   display: flex;
-  backdrop-filter: blur(10px);
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 footer > ul {
   width: 30%;
