@@ -1,4 +1,4 @@
-import { React, useContext, useState } from "react";
+import { React, useContext, useState, useEffect } from "react";
 import Header from "./Header";
 import {
   intialLinksHeader,
@@ -12,11 +12,22 @@ import ContextCards from "../context/ContextCards";
 
 export default function App() {
   const context = useContext(ContextCards);
-  const { product } = context;
+  const { product, setProduct } = context;
   const [linksHeader, setlinksHeader] = useState(intialLinksHeader);
   const [linksFooter, setlinksFooter] = useState(intialLinksFooter);
 
-  // const [product, setProduct] = useState(initailsProducts);
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const res = await fetch("http://localhost:5000/products/allproducts");
+      const data = await res.json();
+      return data;
+    };
+    fetchProducts();
+    fetchProducts().then((x) => console.log(x));
+
+    return () => {};
+  }, [product]);
+
   return (
     <>
       <Container linksHeader={linksHeader} linksFooter={linksFooter}>
