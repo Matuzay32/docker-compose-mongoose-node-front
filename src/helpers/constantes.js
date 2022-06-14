@@ -33,3 +33,17 @@ export const fetchProductsDelete = async (id) => {
   const data = res.json();
   return data;
 };
+//FETCH Update ONE PRODUCT
+export const fetchProductsUpdate = async (id) => {
+  const res = await fetch(`http://localhost:5000/products/id/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ name: "asd", description: "asd", price: 1234 }),
+  });
+  const data = res.json();
+  console.log(res);
+
+  return data;
+};

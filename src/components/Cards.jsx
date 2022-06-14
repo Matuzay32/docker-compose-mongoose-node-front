@@ -4,7 +4,7 @@ import { BsTrashFill } from "react-icons/bs";
 import { FiEdit } from "react-icons/fi";
 
 export default function Cards({ product }) {
-  const { deleteProductForId } = useContext(ContextCards);
+  const { deleteProductForId, fetchProductsUpdate } = useContext(ContextCards);
 
   return product.map((item, index) => {
     const { _id, price, description, name } = item;
@@ -25,7 +25,7 @@ export default function Cards({ product }) {
             <span>Delete</span>
             <BsTrashFill></BsTrashFill>
           </button>
-          <button>
+          <button onClick={() => fetchProductsUpdate(_id)}>
             <span>Edit</span>
             <FiEdit></FiEdit>
           </button>

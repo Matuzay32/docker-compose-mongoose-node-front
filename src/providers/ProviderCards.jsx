@@ -3,6 +3,7 @@ import ContextCards from "./../context/ContextCards";
 import {
   initailsProducts,
   fetchProductsDelete,
+  fetchProductsUpdate,
   fetchProducts,
 } from "../helpers/constantes";
 
@@ -29,6 +30,7 @@ export default function ProviderCards({ children }) {
   return (
     <ContextCards.Provider
       value={{
+        fetchProductsUpdate,
         handdleSearch,
         handdleSearchClick,
         search,
