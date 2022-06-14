@@ -213,6 +213,7 @@ h4 {
   background-color: var(--cardButtonBgHover);
   transform: translateY(12px);
   transition: width 2s, transform 2s, background-color 3s, color 4s;
+  font-size: large;
 }
 .card > button {
   width: 50%;
@@ -238,7 +239,9 @@ h4 {
   padding: 10px;
   align-self: center;
 }
-
+.card > button > span {
+  margin: 5px;
+}
 /* Footer Section */
 footer {
   width: 100%;

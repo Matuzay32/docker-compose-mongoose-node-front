@@ -1,6 +1,10 @@
-import React from "react";
+import { React, useContext } from "react";
+import ContextCards from "../context/ContextCards";
+import { BsTrashFill } from "react-icons/bs";
 
 export default function Cards({ product }) {
+  const { deleteProductForId } = useContext(ContextCards);
+
   return product.map((item, index) => {
     const { _id, price, description, name } = item;
     return (
@@ -16,7 +20,10 @@ export default function Cards({ product }) {
           <h4>{description}</h4>
 
           <h4>{`Price: ${price}`}</h4>
-          <button>Agregar</button>
+          <button onClick={() => deleteProductForId(_id)}>
+            <span>Delete</span>
+            <BsTrashFill></BsTrashFill>
+          </button>
         </div>
       </div>
     );

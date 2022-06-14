@@ -10,14 +10,17 @@ export default function ProviderCards({ children }) {
   const handdleSearch = ({ target }) => {
     setSearch(target.value);
   };
+
   //Esta funcion la uso para setear el value del input en el estado Search
   const handdleSearchClick = async ({ target }) => {
     console.log("Busqueda...", search);
   };
-  //delete Product for id
+
+  //Delete Product for id
   const deleteProductForId = (id) => {
     console.log(id, "este es el id");
   };
+
   return (
     <ContextCards.Provider
       value={{
