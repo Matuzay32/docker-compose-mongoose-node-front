@@ -301,6 +301,20 @@ h4 {
   font-size: large;
   margin: 0 10px 0 10px;
 }
+.formStyle > textarea {
+  width: 100%;
+  height: auto;
+  border: none;
+  font-weight: 700;
+  color: var(--cardColor);
+  background-color: var(--inputSearchHeaderBg);
+  box-shadow: var(--cardShadow);
+  backdrop-filter: blur(10px);
+  padding-left: 10px;
+  border-radius: 10px;
+  font-size: large;
+  margin: 0 10px 0 10px;
+}
 .btn {
   width: 50%;
   height: 30px;

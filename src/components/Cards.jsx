@@ -45,12 +45,12 @@ export default function Cards({ product }) {
                 name="name"
               ></input>
               <label for="">Description</label>
-              <input
+              <textarea
                 type="text"
                 required
                 placeholder="Product description"
                 name="description"
-              ></input>
+              ></textarea>
               <label for="">Product price</label>
               <input
                 type="number"
