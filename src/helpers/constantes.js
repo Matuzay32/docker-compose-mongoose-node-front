@@ -12,7 +12,7 @@ export const intialLinksFooter = [
 ];
 
 export const initailsProducts = [
-  { id: 1, price: 2000, name: "coca", description: "cocacola" },
+  { id: 1, price: 1500, name: "coca", description: "cocacola" },
   { id: 2, price: 2000, name: "pepsi", description: "pepsi" },
   { id: 3, price: 2000, name: "sprite", description: "sprite" },
   { id: 4, price: 2000, name: "fanta", description: "fanta" },
