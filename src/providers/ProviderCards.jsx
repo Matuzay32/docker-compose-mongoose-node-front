@@ -1,6 +1,10 @@
 import React, { useRef, useState } from "react";
 import ContextCards from "./../context/ContextCards";
-import { initailsProducts, fetchProductsDelete } from "../helpers/constantes";
+import {
+  initailsProducts,
+  fetchProductsDelete,
+  fetchProducts,
+} from "../helpers/constantes";
 
 export default function ProviderCards({ children }) {
   const [product, setProduct] = useState([{}]);
@@ -18,8 +22,8 @@ export default function ProviderCards({ children }) {
 
   //Delete Product for id
   const deleteProductForId = (id) => {
-    console.log(id, "este es el id");
     fetchProductsDelete(id).then((res) => console.log(res));
+    fetchProducts().then((res) => setProduct(res));
   };
 
   return (
