@@ -118,7 +118,6 @@ header > ul > li :hover {
   font-family: "Lato", sans-serif;
   font-size: large;
   font-weight: 500;
-  backdrop-filter: blur(10px);
 }
 /* Header Input search */
 .header > .inputSearch {
@@ -469,5 +468,4 @@ footer > ul > li > a {
   font-family: "Lato", sans-serif;
   font-size: large;
   font-weight: 500;
-  backdrop-filter: blur(10px);
 }
