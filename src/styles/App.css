@@ -172,6 +172,7 @@ header > ul > li :hover {
   padding: 3rem;
 }
 .card {
+  position: relative;
   width: 286px;
   height: auto;
   background-color: var(--cardBg);
