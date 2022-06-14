@@ -1,6 +1,7 @@
 import { React, useContext } from "react";
 import ContextCards from "../context/ContextCards";
 import { BsTrashFill } from "react-icons/bs";
+import { fetchProductsDelete } from "../helpers/constantes.js";
 
 export default function Cards({ product }) {
   const { deleteProductForId } = useContext(ContextCards);

@@ -24,3 +24,12 @@ export const fetchProducts = async () => {
   const data = await res.json();
   return data;
 };
+
+//FETCH DELETE ONE PRODUCT
+export const fetchProductsDelete = async (id) => {
+  const res = await fetch(`http://localhost:5000/products/id/${id}`, {
+    method: "DELETE",
+  });
+  const data = res.json();
+  return data;
+};
