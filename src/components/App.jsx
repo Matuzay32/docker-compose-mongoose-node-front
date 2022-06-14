@@ -15,7 +15,7 @@ export default function App() {
   const [linksHeader, setlinksHeader] = useState(intialLinksHeader);
   const [linksFooter, setlinksFooter] = useState(intialLinksFooter);
   const [product, setProduct] = useState(initailsProducts);
-  console.log(context);
+
   return (
     <>
       <Container linksHeader={linksHeader} linksFooter={linksFooter}>

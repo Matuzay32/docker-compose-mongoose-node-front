@@ -3,13 +3,7 @@ import ContextCards from "../context/ContextCards";
 
 export default function Header({ links }) {
   const contexto = useContext(ContextCards);
-  console.log(contexto, "desde el header");
-  const { searchRef } = contexto;
 
-  const handdleClickSearch = ({ target }) => {
-    const { current: busquedaInput } = searchRef;
-    console.log("Buqueda...", busquedaInput.value);
-  };
   return (
     <header className="header">
       <ul className="ul">
@@ -25,16 +19,9 @@ export default function Header({ links }) {
         })}
       </ul>
 
-      <input
-        ref={searchRef}
-        className="inputSearch"
-        type="search"
-        placeholder="Search..."
-      />
+      <input className="inputSearch" type="search" placeholder="Search..." />
 
-      <button onClick={(ev) => handdleClickSearch(ev)} className="buttonSearch">
-        Search
-      </button>
+      <button className="buttonSearch">Search</button>
     </header>
   );
 }
