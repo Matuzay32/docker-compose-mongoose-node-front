@@ -238,6 +238,7 @@ h4 {
   border-radius: 0.25rem;
   padding: 10px;
   align-self: center;
+  margin: 10px;
 }
 .card > button > span {
   margin: 5px;

@@ -1,7 +1,7 @@
 import { React, useContext } from "react";
 import ContextCards from "../context/ContextCards";
 import { BsTrashFill } from "react-icons/bs";
-import { fetchProductsDelete } from "../helpers/constantes.js";
+import { FiEdit } from "react-icons/fi";
 
 export default function Cards({ product }) {
   const { deleteProductForId } = useContext(ContextCards);
@@ -24,6 +24,10 @@ export default function Cards({ product }) {
           <button onClick={() => deleteProductForId(_id)}>
             <span>Delete</span>
             <BsTrashFill></BsTrashFill>
+          </button>
+          <button>
+            <span>Edit</span>
+            <FiEdit></FiEdit>
           </button>
         </div>
       </div>
