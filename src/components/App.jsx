@@ -1,6 +1,10 @@
 import { React, useState } from "react";
 import Header from "./Header";
-import { intialLinksHeader, intialLinksFooter } from "../helpers/constantes";
+import {
+  intialLinksHeader,
+  intialLinksFooter,
+  initailsProducts,
+} from "../helpers/constantes";
 import Cards from "./Cards";
 import Footer from "./Footer";
 import Container from "./Container";
@@ -8,15 +12,12 @@ import Container from "./Container";
 export default function App() {
   const [linksHeader, setlinksHeader] = useState(intialLinksHeader);
   const [linksFooter, setlinksFooter] = useState(intialLinksFooter);
+  const [product, setProduct] = useState(initailsProducts);
+  const [productsSearch, setproductsSearch] = useState();
   return (
     <>
       <Container linksHeader={linksHeader} linksFooter={linksFooter}>
-        <Cards></Cards>
-        <Cards></Cards>
-        <Cards></Cards>
-        <Cards></Cards>
-        <Cards></Cards>
-        <Cards></Cards>
+        <Cards product={product}></Cards>
       </Container>
     </>
   );
