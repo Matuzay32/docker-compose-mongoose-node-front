@@ -2,14 +2,17 @@ import { React, useContext, useState, useRef } from "react";
 import ContextCards from "../context/ContextCards";
 import { BsTrashFill } from "react-icons/bs";
 import { FiEdit } from "react-icons/fi";
+import { AiOutlineClose } from "react-icons/ai";
 
 export default function Cards({ product }) {
   const { deleteProductForId, fetchProductsUpdate } = useContext(ContextCards);
-
-  const mostrarFormFunction = (e) => {
+  const [mostrarForm, setMostrarForm] = useState("");
+  const pressCrossForm = (e) => {
     e.preventDefault();
-    console.log("hice click");
+    //vacio el estado para que la condicion funcione
+    setMostrarForm("");
   };
+
   return product.map((item, index) => {
     const { _id, price, description, name } = item;
     return (
@@ -30,15 +33,22 @@ export default function Cards({ product }) {
               <span>Delete</span>
               <BsTrashFill></BsTrashFill>
             </button>
-            <button onClick={(e) => mostrarFormFunction(e)}>
-              <span>Edit</span>
+
+            <button value={_id} onClick={() => setMostrarForm(_id)}>
+              Edit
               <FiEdit></FiEdit>
             </button>
           </div>
         </div>
-        {
+        {mostrarForm === _id && (
           <div className="contenedorForm">
             <form className="formStyle" action="">
+              <button
+                className="crossButton"
+                onClick={(e) => pressCrossForm(e)}
+              >
+                <AiOutlineClose></AiOutlineClose>
+              </button>
               <label>Product Name</label>
               <input
                 type="text"
@@ -64,12 +74,10 @@ export default function Cards({ product }) {
                 name="price"
               ></input>
 
-              <button onClick={(e) => mostrarFormFunction(e)} className="btn">
-                Save
-              </button>
+              <button className="btn">Save</button>
             </form>
           </div>
-        }
+        )}
       </>
     );
   });
