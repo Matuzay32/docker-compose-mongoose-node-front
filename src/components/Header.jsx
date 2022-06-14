@@ -19,9 +19,19 @@ export default function Header({ links }) {
         })}
       </ul>
 
-      <input className="inputSearch" type="search" placeholder="Search..." />
+      <input
+        onChange={(e) => contexto.handdleSearch(e)}
+        className="inputSearch"
+        type="search"
+        placeholder="Search..."
+      />
 
-      <button className="buttonSearch">Search</button>
+      <button
+        onClick={(e) => contexto.handdleSearchClick(e)}
+        className="buttonSearch"
+      >
+        Search
+      </button>
     </header>
   );
 }

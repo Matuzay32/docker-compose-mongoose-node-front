@@ -1,8 +1,19 @@
 import React, { useRef, useState } from "react";
 import ContextCards from "./../context/ContextCards";
-const a = "dsadsadd";
+
 export default function ProviderCards({ children }) {
+  const [search, setSearch] = useState("");
+  const handdleSearch = ({ target }) => {
+    setSearch(target.value);
+  };
+  const handdleSearchClick = ({ target }) => {
+    console.log(search);
+  };
   return (
-    <ContextCards.Provider value={{ a }}>{children}</ContextCards.Provider>
+    <ContextCards.Provider
+      value={{ handdleSearch, handdleSearchClick, search }}
+    >
+      {children}
+    </ContextCards.Provider>
   );
 }
