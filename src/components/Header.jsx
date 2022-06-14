@@ -1,7 +1,10 @@
-import { React, useRef } from "react";
+import { React, useContext, useRef } from "react";
+import ContextCards from "../context/ContextCards";
 
 export default function Header({ links }) {
-  const searchRef = useRef("");
+  const contexto = useContext(ContextCards);
+  console.log(contexto, "desde el header");
+  const { searchRef } = contexto;
 
   const handdleClickSearch = ({ target }) => {
     const { current: busquedaInput } = searchRef;
