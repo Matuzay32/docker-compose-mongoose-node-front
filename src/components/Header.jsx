@@ -2,7 +2,7 @@ import { React, useContext, useRef } from "react";
 import ContextCards from "../context/ContextCards";
 
 export default function Header({ links }) {
-  const contexto = useContext(ContextCards);
+  const { handdleSearch, handdleSearchClick } = useContext(ContextCards);
 
   return (
     <header className="header">
@@ -20,16 +20,13 @@ export default function Header({ links }) {
       </ul>
 
       <input
-        onChange={(e) => contexto.handdleSearch(e)}
+        onChange={(e) => handdleSearch(e)}
         className="inputSearch"
         type="search"
         placeholder="Search..."
       />
 
-      <button
-        onClick={(e) => contexto.handdleSearchClick(e)}
-        className="buttonSearch"
-      >
+      <button onClick={(e) => handdleSearchClick(e)} className="buttonSearch">
         Search
       </button>
     </header>
