@@ -12,9 +12,15 @@ export const intialLinksFooter = [
 ];
 
 export const initailsProducts = [
-  { id: 1, price: 1500, name: "coca", description: "cocacola" },
-  { id: 2, price: 2000, name: "pepsi", description: "pepsi" },
-  { id: 3, price: 2000, name: "sprite", description: "sprite" },
-  { id: 4, price: 2000, name: "fanta", description: "fanta" },
-  { id: 5, price: 2000, name: "soda", description: "soda" },
+  { _id: 1, price: 1500, name: "coca", description: "cocacola" },
+  { _id: 2, price: 2000, name: "pepsi", description: "pepsi" },
+  { _id: 3, price: 2000, name: "sprite", description: "sprite" },
+  { _id: 4, price: 2000, name: "fanta", description: "fanta" },
+  { _id: 5, price: 2000, name: "soda", description: "soda" },
 ];
+//FETCH_ALL_PRODUCTS
+export const fetchProducts = async () => {
+  const res = await fetch("http://localhost:5000/products/allproducts");
+  const data = await res.json();
+  return data;
+};

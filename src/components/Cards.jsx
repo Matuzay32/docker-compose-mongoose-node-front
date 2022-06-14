@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Cards({ product }) {
   return product.map((item, index) => {
-    const { id, price, description, name } = item;
+    const { _id, price, description, name } = item;
     return (
-      <div key={`${id}${name}`} class="contenedorCard">
+      <div key={`${_id}`} class="contenedorCard">
         <div class="card">
           <div>
             <img

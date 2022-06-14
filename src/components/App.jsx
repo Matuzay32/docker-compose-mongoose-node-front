@@ -3,6 +3,7 @@ import Header from "./Header";
 import {
   intialLinksHeader,
   intialLinksFooter,
+  fetchProducts,
   // initailsProducts,
 } from "../helpers/constantes";
 import Cards from "./Cards";
@@ -17,16 +18,10 @@ export default function App() {
   const [linksFooter, setlinksFooter] = useState(intialLinksFooter);
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      const res = await fetch("http://localhost:5000/products/allproducts");
-      const data = await res.json();
-      return data;
-    };
-    fetchProducts();
-    fetchProducts().then((x) => console.log(x));
+    fetchProducts().then((x) => setProduct(x));
 
     return () => {};
-  }, [product]);
+  }, []);
 
   return (
     <>
