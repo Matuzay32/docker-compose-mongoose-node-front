@@ -4,7 +4,7 @@ import Container from "../components/Container";
 import ContextCards from "../context/ContextCards";
 import { intialLinksFooter, intialLinksHeader } from "../helpers/constantes.js";
 
-export default function Home() {
+export default function UploadProducts() {
   const context = useContext(ContextCards);
   const { product, setProduct } = context;
   const [linksFooter, setlinksFooter] = useState(intialLinksFooter);
@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Container linksHeader={linksHeader} linksFooter={linksFooter}>
-        <h1>HOME</h1>
+        <h1>Upload Products</h1>
       </Container>
     </>
   );
