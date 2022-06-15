@@ -5,9 +5,9 @@
 /* Variables de colores sombras y algunas preferencias */
 :root {
   /* Header header variables  */
-  --headerHeaderBg: rgb(136, 136, 136);
+  --headerHeaderBg: rgba(136, 136, 136, 0.235);
   /* ul header variables */
-  --ulHeaderBg: rgb(136, 136, 136);
+  --ulHeaderBg: rgba(136, 136, 136, 0);
   /* li header variables */
   --liHeaderBg: rgba(0, 0, 0, 0.754);
   --liHeaderBoxShadow: 0px 0px 16px 0px rgba(78, 77, 77, 0.8);
@@ -42,9 +42,9 @@
   --cardButtonBgHover: rgb(255, 128, 0);
 
   /* Footer footer variables  */
-  --footerfooterBg: rgb(136, 136, 136);
+  --footerfooterBg: rgba(136, 136, 136, 0.122);
   /* ul Footer  variables */
-  --ulFooterBg: rgb(136, 136, 136);
+  --ulFooterBg: rgba(136, 136, 136, 0);
   /* li Footer  variables */
   --liFooterBg: rgba(0, 0, 0, 0.754);
   --liHeaderBoxShadow: 0px 0px 16px 0px rgba(78, 77, 77, 0.8);
@@ -430,7 +430,6 @@ footer > ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(10px);
 }
 footer > ul > li {
   color: white;
