@@ -53,7 +53,9 @@ export default function Cards({ product }) {
             </button>
           </div>
         </div>
+
         {/* Formulario de edicion */}
+        {mostrarForm === _id ? console.log(true) : console.log(false)}
         {mostrarForm === _id && (
           <div className="contenedorForm">
             <form className="formStyle" action="">

@@ -2,7 +2,6 @@ import React from "react";
 import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 
 export default function Footer({ links }) {
-  console.log(links);
   return (
     <footer className="footer">
       <ul className="ul">
