@@ -10,7 +10,6 @@ export default function Header({ links }) {
       <ul className="ul">
         {links?.map((item, index) => {
           const { link, href } = item;
-          console.log(href);
           return (
             <li key={`${index} ${link}`} className="li">
               <NavLink to={`${href}`} className="a">

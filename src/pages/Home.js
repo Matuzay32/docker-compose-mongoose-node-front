@@ -13,7 +13,15 @@ export default function Home() {
   return (
     <>
       <Container linksHeader={linksHeader} linksFooter={linksFooter}>
-        <h1>HOme</h1>
+        <div className="homeContainer">
+          <h1 className="titleHome">
+            Bienvenido Yumi tu mejor opcion para hacer pedidos, Desde la
+            comodidad de tu hogar
+          </h1>
+          <div className="heroHome">
+            <h1 className="titleHome">Hero Home</h1>
+          </div>
+        </div>
       </Container>
     </>
   );

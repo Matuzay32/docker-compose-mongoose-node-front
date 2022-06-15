@@ -263,6 +263,57 @@ h4 {
   margin: 5px;
 }
 
+/* Home page */
+.homeContainer {
+  color: var(--cardColor);
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+.homeContainer > .titleHome {
+  text-transform: capitalize;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  text-shadow: 1px 1px 1rem;
+  box-shadow: 1px 1px 1rem black;
+  align-self: center;
+  margin-top: 3rem;
+  margin-bottom: 12px;
+  margin-left: 12px;
+  background: #fff;
+  margin: 50px;
+  background: #fff;
+  margin: 50px;
+  background: #fff;
+  margin: 50px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: linear-gradient(
+    45deg,
+    #ff8400 25%,
+    #000000 0,
+    #000000 50%,
+    #000000 0%,
+    #000000 75%,
+    #ff8400 0
+  );
+}
+.homeContainer > .heroHome {
+  border-radius: 30px;
+  background-color: var(--cardBg);
+  width: 50rem;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  backdrop-filter: blur(10px);
+  min-height: 100vh;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+/* Products Page */
 /* Form Styles */
 /* Cards Form Update */
 .contenedorForm {
