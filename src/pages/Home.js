@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Container linksHeader={linksHeader} linksFooter={linksFooter}>
-        HOME
+        <h1>HOME</h1>
       </Container>
     </>
   );
