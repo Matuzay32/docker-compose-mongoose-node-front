@@ -3,7 +3,7 @@ import ContextCards from "../context/ContextCards";
 import { BsTrashFill } from "react-icons/bs";
 import { FiEdit } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
-
+//mejorando
 export default function Cards({ product }) {
   const { deleteProductForId, fetchProductsUpdate, fetchProducts, setProduct } =
     useContext(ContextCards);
