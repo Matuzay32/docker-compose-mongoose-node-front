@@ -9,10 +9,11 @@ export default function Header({ links }) {
     <header className="header">
       <ul className="ul">
         {links?.map((item, index) => {
-          const { link } = item;
+          const { link, href } = item;
+          console.log(href);
           return (
             <li key={`${index} ${link}`} className="li">
-              <NavLink to={`/${link}`} className="a">
+              <NavLink to={`${href}`} className="a">
                 {link}
               </NavLink>
             </li>
