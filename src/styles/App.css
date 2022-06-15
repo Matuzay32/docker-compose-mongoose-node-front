@@ -29,7 +29,7 @@
   --buttonSearchHeaderBgHover: rgb(255, 128, 0);
 
   /* Cards Styles variables */
-  --cardBg: rgb(75, 75, 75);
+  --cardBg: rgba(75, 75, 75, 0.598);
   --cardShadow: 0px 0px 16px 0px rgba(78, 77, 77, 0.8);
   --cardColor: #fff;
 
@@ -191,7 +191,7 @@ header > ul > li :hover {
   background-color: var(--cardBg);
   box-shadow: var(--cardShadow);
   backdrop-filter: blur(10px);
-  border-radius: 10px;
+  border-radius: 30px;
   display: flex;
   flex-flow: column;
   align-items: flex-start;
@@ -216,6 +216,7 @@ h4 {
   width: 286px;
   height: auto;
   backdrop-filter: blur(10px);
+  border-radius: 30px;
 }
 .card > div > img {
   width: 286px;
