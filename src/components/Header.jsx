@@ -11,7 +11,7 @@ export default function Header({ links }) {
           const { link } = item;
           return (
             <li key={`${index} ${link}`} className="li">
-              <a className="a" href="#">
+              <a className="a" href={link}>
                 {link}
               </a>
             </li>

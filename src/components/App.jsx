@@ -1,15 +1,11 @@
 import { React, useContext, useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./Header";
 import {
   intialLinksHeader,
   intialLinksFooter,
   fetchProducts,
   // initailsProducts,
 } from "../helpers/constantes";
-import Cards from "./Cards";
-import Footer from "./Footer";
-import Container from "./Container";
 import ContextCards from "../context/ContextCards";
 import Products from "../pages/Products";
 import Home from "../pages/Home";
@@ -29,12 +25,8 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}>
-          <Route index element={<Home />} />
-          <Route path="products" element={<Products />} />
-          {/* <Route path="contact" element={<Contact />} /> */}
-          {/* <Route path="*" element={<NoPage />} /> */}
-        </Route>
+        <Route path="/" element={<Home></Home>} />
+        <Route path="/products" element={<Products></Products>} />
       </Routes>
     </BrowserRouter>
   );

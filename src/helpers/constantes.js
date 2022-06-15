@@ -1,16 +1,15 @@
 import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 
 export const intialLinksHeader = [
-  { link: "Products" },
-  { link: "Users" },
-  { link: "Registers" },
+  { link: "products" },
+  { link: "users" },
+  { link: "registers" },
 ];
 export const intialLinksFooter = [
   { link: "https://www.instagram.com/" },
   { link: "https://www.facebook.com/" },
   { link: "https://twitter.com/" },
 ];
-
 export const initailsProducts = [
   { _id: 1, price: 1500, name: "coca", description: "cocacola" },
   { _id: 2, price: 2000, name: "pepsi", description: "pepsi" },
@@ -24,7 +23,6 @@ export const fetchProducts = async () => {
   const data = await res.json();
   return data;
 };
-
 //FETCH DELETE ONE PRODUCT
 export const fetchProductsDelete = async (id) => {
   const res = await fetch(`http://localhost:5000/products/id/${id}`, {
