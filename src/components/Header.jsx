@@ -1,4 +1,5 @@
 import { React, useContext, useRef } from "react";
+import { NavLink } from "react-router-dom";
 import ContextCards from "../context/ContextCards";
 
 export default function Header({ links }) {
@@ -11,9 +12,9 @@ export default function Header({ links }) {
           const { link } = item;
           return (
             <li key={`${index} ${link}`} className="li">
-              <a className="a" href={link}>
+              <NavLink to={`/${link}`} className="a">
                 {link}
-              </a>
+              </NavLink>
             </li>
           );
         })}

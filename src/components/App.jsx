@@ -8,6 +8,7 @@ import {
 } from "../helpers/constantes";
 import ContextCards from "../context/ContextCards";
 import Products from "../pages/Products";
+import UploadProducts from "../pages/UploadProducts";
 import Home from "../pages/Home";
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home></Home>} />
+        <Route path="/upload" element={<UploadProducts></UploadProducts>} />
         <Route path="/products" element={<Products></Products>} />
       </Routes>
     </BrowserRouter>
