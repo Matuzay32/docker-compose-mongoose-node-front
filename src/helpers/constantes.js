@@ -7,6 +7,10 @@ export const intialLinksHeader = [
   { link: "users", href: "/users" },
   { link: "registers", href: "/registers" },
 ];
+export const intialLinksHome = [
+  { link: "upload", href: "/upload" },
+  { link: "registers", href: "/registers" },
+];
 export const intialLinksFooter = [
   { link: "https://www.instagram.com/" },
   { link: "https://www.facebook.com/" },

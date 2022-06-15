@@ -303,16 +303,62 @@ h4 {
   border-radius: 30px;
   background-color: var(--cardBg);
   width: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: wrap;
+  backdrop-filter: blur(10px);
+  min-height: 300px;
+  box-shadow: 1px 1px 1rem black;
+}
+.homeContainer > .heroHome > .contenedorFormTitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.homeContainer > .heroHome > ul {
+  width: 30%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: wrap;
+  background-color: red;
+}
+.homeContainer > .heroHome > ul > li {
+  color: white;
+  width: 100%;
+  height: 50px;
+  margin-left: 10px;
+  background-color: var(--liFooterBg);
+  box-shadow: var(--liFooterBoxShadowHover);
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  border-radius: 30px;
   backdrop-filter: blur(10px);
-  min-height: 100vh;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin: 1rem;
 }
+
+.heroHome > ul > li > .a {
+  text-decoration: none;
+  color: var(--aHeaderColor);
+  font-family: "Lato", sans-serif;
+  font-size: large;
+  font-weight: 500;
+}
+.titleHomeForm {
+  text-transform: capitalize;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  text-shadow: 1px 1px 10px orange;
+}
+
 /* Products Page */
 /* Form Styles */
 /* Cards Form Update */
