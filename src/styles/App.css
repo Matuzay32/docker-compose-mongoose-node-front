@@ -9,7 +9,7 @@
   /* ul header variables */
   --ulHeaderBg: rgba(136, 136, 136, 0);
   /* li header variables */
-  --liHeaderBg: rgba(0, 0, 0, 0.754);
+  --liHeaderBg: rgba(0, 0, 0, 0.53);
   --liHeaderBoxShadow: 0px 0px 16px 0px rgba(78, 77, 77, 0.8);
   --liHeaderColor: #ffff;
   /* Hover header li variables */
@@ -19,7 +19,7 @@
   /* a header variables */
   --aHeaderColor: #ffff;
   /* Input Search */
-  --inputSearchHeaderBg: rgba(0, 0, 0, 0.754);
+  --inputSearchHeaderBg: rgba(0, 0, 0, 0.5);
   --inputSearchShadow: 0px 0px 16px 0px rgba(78, 77, 77, 0.8);
   /* Button search */
   --buttonSearchHeaderColor: #fff;
