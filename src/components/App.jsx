@@ -1,4 +1,5 @@
 import { React, useContext, useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import {
   intialLinksHeader,
@@ -10,6 +11,8 @@ import Cards from "./Cards";
 import Footer from "./Footer";
 import Container from "./Container";
 import ContextCards from "../context/ContextCards";
+import Products from "../pages/Products";
+import Home from "../pages/Home";
 
 export default function App() {
   const context = useContext(ContextCards);
@@ -24,10 +27,12 @@ export default function App() {
   }, []);
 
   return (
-    <>
-      <Container linksHeader={linksHeader} linksFooter={linksFooter}>
-        <Cards product={product}></Cards>
-      </Container>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}>
+          <Route path="/Products" element={<Products />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
