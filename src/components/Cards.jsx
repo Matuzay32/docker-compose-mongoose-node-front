@@ -5,16 +5,29 @@ import { FiEdit } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 
 export default function Cards({ product }) {
-  const { deleteProductForId, fetchProductsUpdate } = useContext(ContextCards);
+  const { deleteProductForId, fetchProductsUpdate, fetchProducts, setProduct } =
+    useContext(ContextCards);
   const [mostrarForm, setMostrarForm] = useState("");
+  const [datosForm, setDatosForm] = useState({});
+
   const pressCrossForm = (e) => {
     e.preventDefault();
     //vacio el estado para que la condicion funcione
     setMostrarForm("");
   };
-
+  //Obtengo los datos del Formulario para editar el  Producto
+  const datosOnChangeForm = ({ value, name }) => {
+    setDatosForm({ ...datosForm, [name]: value });
+  };
+  //Al tocar el boton en save actualiza el producto en la base de datos
+  const saveDatosForm = (e, _id) => {
+    fetchProductsUpdate(_id, datosForm);
+    fetchProducts().then((res) => setProduct(res));
+  };
+  //Creo todos los productos
   return product.map((item, index) => {
     const { _id, price, description, name } = item;
+
     return (
       <>
         <div key={`${_id}`} className="contenedorCard">
@@ -40,6 +53,7 @@ export default function Cards({ product }) {
             </button>
           </div>
         </div>
+        {/* Formulario de edicion */}
         {mostrarForm === _id && (
           <div className="contenedorForm">
             <form className="formStyle" action="">
@@ -51,6 +65,7 @@ export default function Cards({ product }) {
               </button>
               <label>Product Name</label>
               <input
+                onChange={(e) => datosOnChangeForm(e.target)}
                 type="text"
                 required
                 placeholder="Product Name"
@@ -59,6 +74,7 @@ export default function Cards({ product }) {
               ></input>
               <label>Description</label>
               <textarea
+                onChange={(e) => datosOnChangeForm(e.target)}
                 defaultValue={description}
                 type="text"
                 required
@@ -67,6 +83,7 @@ export default function Cards({ product }) {
               ></textarea>
               <label>Product price</label>
               <input
+                onChange={(e) => datosOnChangeForm(e.target)}
                 defaultValue={price}
                 type="number"
                 required
@@ -74,7 +91,9 @@ export default function Cards({ product }) {
                 name="price"
               ></input>
 
-              <button className="btn">Save</button>
+              <button onClick={(e) => saveDatosForm(e, _id)} className="btn">
+                Save
+              </button>
             </form>
           </div>
         )}
