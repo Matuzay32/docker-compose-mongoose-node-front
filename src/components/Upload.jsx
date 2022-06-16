@@ -7,7 +7,7 @@ export default function Upload() {
 
   //Obtengo los datos del formulario
   const datosForm = ({ value, name }) => {
-    setFormData([{ ...formData, [name]: value }]);
+    setFormData({ ...formData, [name]: value });
   };
 
   //Envio los datos del formulario a la DB con el metodo upload

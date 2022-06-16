@@ -55,7 +55,6 @@ export default function Cards({ product }) {
         </div>
 
         {/* Formulario de edicion */}
-        {mostrarForm === _id ? console.log(true) : console.log(false)}
         {mostrarForm === _id && (
           <div className="contenedorForm">
             <form className="formStyle" action="">
