@@ -517,118 +517,18 @@ h4 {
   margin: 1rem 1rem;
 }
 .UploadPageSection > .contenedorForm {
-  width: 60%;
+  width: 70%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(10px);
-}
-.UploadPageSection > .formStyle {
-  border-radius: 30px;
-  background-color: var(--cardBg);
-  width: 50%;
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  backdrop-filter: blur(10px);
-}
-.UploadPageSection > .formStyle > label {
-  height: 40px;
-  width: 100%;
-  color: white;
-  text-transform: capitalize;
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-  font-size: large;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-.UploadPageSection > .formStyle > label::after {
-  content: "";
-  background-color: var(--cardButtonColor);
-  width: 10px;
-  height: 10px;
-  box-shadow: 5px 5px 0px 0px var(--buttonSearchHeaderBgHover),
-    5px 0px 0px var(--buttonSearchHeaderBorderColor);
-  border-radius: 30px;
-  transform: translateY(-10px);
-}
-.UploadPageSection > .formStyle > input {
-  width: 100%;
-  height: 35px;
-  border: none;
-  font-weight: 700;
-  color: var(--cardColor);
-  background-color: var(--inputSearchHeaderBg);
-  box-shadow: var(--cardShadow);
-  backdrop-filter: blur(10px);
-  padding-left: 20px;
-  border-radius: 10px;
-  font-size: large;
-  margin: 0 20px 0 20px;
-  backdrop-filter: blur(10px);
-}
-.UploadPageSection > .formStyle > textarea {
-  width: 100%;
-  height: 100px;
-  border: none;
-  font-weight: 700;
-  color: var(--cardColor);
-  background-color: var(--inputSearchHeaderBg);
-  box-shadow: var(--cardShadow);
-  backdrop-filter: blur(10px);
-  padding-left: 10px;
-  border-radius: 10px;
-  font-size: large;
-  margin: 0 10px 0 10px;
-  backdrop-filter: blur(10px);
-}
-.UploadPageSection > .formStyle > .crossButton {
-  position: absolute;
-  top: -21px;
-  left: -24px;
-  z-index: 1000;
-  width: 40px;
-  right: 10px;
-  display: flex;
-  height: 30px;
-  cursor: pointer;
-  color: var(--cardButtonColor);
-  background-color: var(--cardButtonBg);
-  border-color: var(--cardButtonBorderColor);
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  -webkit-user-select: none;
-  user-select: none;
-  border: 1px solid transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 2.25rem;
   padding: 10px;
-  align-self: center;
-  margin: 10px;
-  backdrop-filter: blur(10px);
 }
-.UploadPageSection > .formStyle > .crossButton:hover {
-  color: var(--cardButtonColorHover);
-  background-color: var(--cardButtonBgHover);
-  transition: width 2s, transform 2s, background-color 3s, color 4s;
-  font-size: large;
-  backdrop-filter: blur(10px);
+.UploadPageSection > .contenedorForm > .formStyle {
+  height: 30rem;
 }
-
 /* Footer Section */
 footer {
   width: 100%;
