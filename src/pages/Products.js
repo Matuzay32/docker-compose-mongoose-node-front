@@ -13,7 +13,7 @@ export default function Products() {
   return (
     <>
       <Container linksHeader={linksHeader} linksFooter={linksFooter}>
-        <Cards product={product}></Cards>
+        <Cards setProduct={setProduct} product={product}></Cards>
       </Container>
     </>
   );

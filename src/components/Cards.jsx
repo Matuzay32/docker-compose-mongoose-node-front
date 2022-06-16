@@ -5,25 +5,14 @@ import { FiEdit } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
 //mejorando
 export default function Cards({ product }) {
-  const { deleteProductForId, fetchProductsUpdate, fetchProducts, setProduct } =
-    useContext(ContextCards);
-  const [mostrarForm, setMostrarForm] = useState("");
-  const [datosForm, setDatosForm] = useState({});
-
-  const pressCrossForm = (e) => {
-    e.preventDefault();
-    //vacio el estado para que la condicion funcione
-    setMostrarForm("");
-  };
-  //Obtengo los datos del Formulario para editar el  Producto
-  const datosOnChangeForm = ({ value, name }) => {
-    setDatosForm({ ...datosForm, [name]: value });
-  };
-  //Al tocar el boton en save actualiza el producto en la base de datos
-  const saveDatosForm = (e, _id) => {
-    fetchProductsUpdate(_id, datosForm);
-    fetchProducts().then((res) => setProduct(res));
-  };
+  const {
+    mostrarForm,
+    setMostrarForm,
+    pressCrossForm,
+    datosOnChangeForm,
+    saveDatosForm,
+    deleteProductForId,
+  } = useContext(ContextCards);
   //Creo todos los productos
   return product.map((item, index) => {
     const { _id, price, description, name } = item;
