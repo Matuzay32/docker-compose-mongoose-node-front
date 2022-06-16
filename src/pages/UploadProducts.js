@@ -3,6 +3,7 @@ import Cards from "../components/Cards";
 import Container from "../components/Container";
 import ContextCards from "../context/ContextCards";
 import { intialLinksFooter, intialLinksHeader } from "../helpers/constantes.js";
+import Upload from "../components/Upload";
 
 export default function UploadProducts() {
   const context = useContext(ContextCards);
@@ -13,7 +14,7 @@ export default function UploadProducts() {
   return (
     <>
       <Container linksHeader={linksHeader} linksFooter={linksFooter}>
-        <h1>Upload Products</h1>
+        <Upload></Upload>
       </Container>
     </>
   );
