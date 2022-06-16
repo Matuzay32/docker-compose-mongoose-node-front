@@ -51,3 +51,18 @@ export const fetchProductsUpdate = async (id, datos) => {
 
   return data;
 };
+
+//FETCH post PRODUCT
+export const fetchProductsPost = async (datos) => {
+  const res = await fetch(`http://localhost:5000/products/upload`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(datos),
+  });
+  const data = res.json();
+  console.log(res);
+
+  return data;
+};
