@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import ContextCards from "../context/ContextCards";
 
-export default function Register() {
-  const { formDataRegisterPageFunction, sendFormDataRegisterPage } =
+export default function Login() {
+  const { formDataRegisterPageFunction, sendFormDataLoginPage } =
     useContext(ContextCards);
   return (
     <section className="UploadPageSection">
@@ -33,7 +33,7 @@ export default function Register() {
             name="email"
           ></input>
 
-          <button onClick={(e) => sendFormDataRegisterPage(e)} className="btn">
+          <button onClick={(e) => sendFormDataLoginPage(e)} className="btn">
             Save
           </button>
         </form>

@@ -82,3 +82,19 @@ export const fetchRegisterPagePost = async (datos) => {
 
   return data;
 };
+
+//FETCH post Login
+export const fetchLoginPagePost = async (datos) => {
+  const res = await fetch(`http://localhost:5000/users/login`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(datos),
+  });
+  const data = res.json();
+  console.log(res);
+
+  return data;
+};

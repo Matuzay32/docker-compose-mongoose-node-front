@@ -11,6 +11,7 @@ import Products from "../pages/Products";
 import UploadProducts from "../pages/UploadProducts";
 import Home from "../pages/Home";
 import RegisterPage from "../pages/RegisterPage.js";
+import LoginPage from "../pages/LoginPage";
 
 export default function App() {
   const context = useContext(ContextCards);
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="/upload" element={<UploadProducts></UploadProducts>} />
         <Route path="/products" element={<Products></Products>} />
         <Route path="/registers" element={<RegisterPage></RegisterPage>} />
+        <Route path="/login" element={<LoginPage></LoginPage>} />
       </Routes>
     </BrowserRouter>
   );

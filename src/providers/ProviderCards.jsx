@@ -7,6 +7,7 @@ import {
   fetchProducts,
   fetchProductsPost,
   fetchRegisterPagePost,
+  fetchLoginPagePost,
 } from "../helpers/constantes";
 
 export default function ProviderCards({ children }) {
@@ -25,6 +26,16 @@ export default function ProviderCards({ children }) {
   const [datosFormPageRegister, setDatosFormFormPageRegister] = useState({});
   const [formDataPageRegister, setFormDataPageRegister] = useState({});
 
+  //LOGIN
+  const sendFormDataLoginPage = (e) => {
+    e.preventDefault();
+    alert(JSON.stringify(formDataPageRegister));
+
+    fetchLoginPagePost(formDataPageRegister).then((x) =>
+      sessionStorage.setItem("token", JSON.stringify(x))
+    );
+  };
+
   //REGISTER
   const formDataRegisterPageFunction = ({ value, name }) => {
     setFormDataPageRegister({ ...formDataPageRegister, [name]: value });
@@ -33,7 +44,6 @@ export default function ProviderCards({ children }) {
   //REGISTER
   const sendFormDataRegisterPage = (e) => {
     // e.preventDefault();
-    alert(JSON.stringify(formDataPageRegister));
     fetchRegisterPagePost(formDataPageRegister);
     // fetchProducts().then((res) => setProduct(res));
   };
@@ -88,6 +98,7 @@ export default function ProviderCards({ children }) {
   return (
     <ContextCards.Provider
       value={{
+        sendFormDataLoginPage,
         formDataRegisterPageFunction,
         datosOnChangeFormRegisterPage,
         sendFormDataRegisterPage,
