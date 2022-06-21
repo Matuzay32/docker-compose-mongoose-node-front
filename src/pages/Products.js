@@ -3,6 +3,7 @@ import Cards from "../components/Cards";
 import Container from "../components/Container";
 import ContextCards from "../context/ContextCards";
 import { intialLinksFooter, intialLinksHeader } from "../helpers/constantes.js";
+import ProductNotFound from "../components/ProductNotFound.jsx";
 
 export default function Products() {
   const context = useContext(ContextCards);
@@ -13,7 +14,11 @@ export default function Products() {
   return (
     <>
       <Container linksHeader={linksHeader} linksFooter={linksFooter}>
-        <Cards setProduct={setProduct} product={product}></Cards>
+        {product.length > 0 ? (
+          <Cards setProduct={setProduct} product={product}></Cards>
+        ) : (
+          <ProductNotFound></ProductNotFound>
+        )}
       </Container>
     </>
   );
