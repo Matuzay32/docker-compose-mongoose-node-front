@@ -1,5 +1,13 @@
 import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 
+export const ObtenerTokenLocalStorage = async () => {
+  var miToken = await sessionStorage.getItem("token");
+
+  if (miToken) {
+    return miToken;
+  }
+};
+
 export const intialLinksHeader = [
   { link: "Home", href: "/" },
   { link: "Products", href: "/products" },
@@ -34,6 +42,11 @@ export const fetchProducts = async () => {
 export const fetchProductsDelete = async (id) => {
   const res = await fetch(`http://localhost:5000/products/id/${id}`, {
     method: "DELETE",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      token: JSON.parse(await ObtenerTokenLocalStorage())?.token,
+    },
   });
   const data = res.json();
   return data;
