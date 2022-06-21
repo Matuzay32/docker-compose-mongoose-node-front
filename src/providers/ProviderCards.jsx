@@ -8,6 +8,7 @@ import {
   fetchProductsPost,
   fetchRegisterPagePost,
   fetchLoginPagePost,
+  searchFetchProducts,
 } from "../helpers/constantes";
 
 export default function ProviderCards({ children }) {
@@ -66,6 +67,7 @@ export default function ProviderCards({ children }) {
   //Esta funcion la uso para setear el value del input en el estado Search
   const handdleSearchClick = async ({ target }) => {
     console.log("Busqueda...", search);
+    searchFetchProducts(search).then((res) => setProduct(res));
   };
 
   //Delete Product for id
@@ -98,6 +100,7 @@ export default function ProviderCards({ children }) {
   return (
     <ContextCards.Provider
       value={{
+        searchFetchProducts,
         sendFormDataLoginPage,
         formDataRegisterPageFunction,
         datosOnChangeFormRegisterPage,

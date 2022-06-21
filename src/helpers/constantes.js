@@ -38,6 +38,14 @@ export const fetchProducts = async () => {
   const data = await res.json();
   return data;
 };
+//SerachFetchAllProducts
+export const searchFetchProducts = async (search) => {
+  const res = await fetch(
+    `http://localhost:5000/products/findProductsByName?productName=${search}`
+  );
+  const data = await res.json();
+  return data;
+};
 //FETCH DELETE ONE PRODUCT
 export const fetchProductsDelete = async (id) => {
   const res = await fetch(`http://localhost:5000/products/id/${id}`, {

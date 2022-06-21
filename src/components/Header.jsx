@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom";
 import ContextCards from "../context/ContextCards";
 
 export default function Header({ links }) {
-  const { handdleSearch, handdleSearchClick } = useContext(ContextCards);
+  const { handdleSearch, handdleSearchClick, setSearch } =
+    useContext(ContextCards);
 
   return (
     <header className="header">
