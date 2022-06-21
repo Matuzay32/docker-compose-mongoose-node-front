@@ -10,6 +10,7 @@ import ContextCards from "../context/ContextCards";
 import Products from "../pages/Products";
 import UploadProducts from "../pages/UploadProducts";
 import Home from "../pages/Home";
+import RegisterPage from "../pages/RegisterPage.js";
 
 export default function App() {
   const context = useContext(ContextCards);
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/" element={<Home></Home>} />
         <Route path="/upload" element={<UploadProducts></UploadProducts>} />
         <Route path="/products" element={<Products></Products>} />
+        <Route path="/registers" element={<RegisterPage></RegisterPage>} />
       </Routes>
     </BrowserRouter>
   );

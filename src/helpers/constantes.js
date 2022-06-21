@@ -66,3 +66,18 @@ export const fetchProductsPost = async (datos) => {
 
   return data;
 };
+
+//FETCH post RegisterPage
+export const fetchRegisterPagePost = async (datos) => {
+  const res = await fetch(`http://localhost:5000/users/create`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(datos),
+  });
+  const data = res.json();
+  console.log(res);
+
+  return data;
+};

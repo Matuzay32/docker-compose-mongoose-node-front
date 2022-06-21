@@ -6,6 +6,7 @@ import {
   fetchProductsUpdate,
   fetchProducts,
   fetchProductsPost,
+  fetchRegisterPagePost,
 } from "../helpers/constantes";
 
 export default function ProviderCards({ children }) {
@@ -20,12 +21,26 @@ export default function ProviderCards({ children }) {
   //DATOS FORM DE PRODUCTS TANTO EL FORMULARIO DE LA CARTA COMO EL FORMLARIO
   const [datosForm, setDatosForm] = useState({});
   const [formData, setFormData] = useState({});
+  //DATOS FORM DE RegisterPage
+  const [datosFormPageRegister, setDatosFormFormPageRegister] = useState({});
+  const [formDataPageRegister, setFormDataPageRegister] = useState({});
 
-  //Obtengo los datos del formulario
-  const formDataUploadPageFunction = ({ value, name }) => {
-    setFormData({ ...formData, [name]: value });
+  //REGISTER
+  const formDataRegisterPageFunction = ({ value, name }) => {
+    setFormDataPageRegister({ ...formDataPageRegister, [name]: value });
   };
 
+  //REGISTER
+  const sendFormDataRegisterPage = (e) => {
+    // e.preventDefault();
+    alert(JSON.stringify(formDataPageRegister));
+    fetchRegisterPagePost(formDataPageRegister);
+    // fetchProducts().then((res) => setProduct(res));
+  };
+  //REGISTER
+  const datosOnChangeFormRegisterPage = ({ value, name }) => {
+    setDatosForm({ ...datosFormPageRegister, [name]: value });
+  };
   //Envio los datos del formulario a la DB con el metodo upload
   const sendFormData = (e) => {
     // e.preventDefault();
@@ -66,10 +81,20 @@ export default function ProviderCards({ children }) {
     fetchProductsUpdate(_id, datosForm);
     fetchProducts().then((res) => setProduct(res));
   };
-
+  //PRODUCTOS
+  const formDataUploadPageFunction = ({ value, name }) => {
+    setFormData({ ...formData, [name]: value });
+  };
   return (
     <ContextCards.Provider
       value={{
+        formDataRegisterPageFunction,
+        datosOnChangeFormRegisterPage,
+        sendFormDataRegisterPage,
+        datosFormPageRegister,
+        setDatosFormFormPageRegister,
+        formDataPageRegister,
+        setFormDataPageRegister,
         formData,
         setFormData,
         formDataUploadPageFunction,
