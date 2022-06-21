@@ -56,7 +56,9 @@ export const fetchProductsUpdate = async (id, datos) => {
   const res = await fetch(`http://localhost:5000/products/id/${id}`, {
     method: "PUT",
     headers: {
+      Accept: "application/json",
       "Content-Type": "application/json",
+      token: JSON.parse(await ObtenerTokenLocalStorage())?.token,
     },
     body: JSON.stringify(datos),
   });
@@ -71,7 +73,9 @@ export const fetchProductsPost = async (datos) => {
   const res = await fetch(`http://localhost:5000/products/upload`, {
     method: "POST",
     headers: {
+      Accept: "application/json",
       "Content-Type": "application/json",
+      token: JSON.parse(await ObtenerTokenLocalStorage())?.token,
     },
     body: JSON.stringify(datos),
   });
