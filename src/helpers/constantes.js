@@ -1,15 +1,16 @@
 import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs";
 
 export const intialLinksHeader = [
-  { link: "home", href: "/" },
-  { link: "products", href: "/products" },
-  { link: "upload", href: "/upload" },
-  { link: "users", href: "/users" },
-  { link: "registers", href: "/registers" },
+  { link: "Home", href: "/" },
+  { link: "Products", href: "/products" },
+  { link: "Upload Products", href: "/upload" },
+  { link: "Users", href: "/users" },
+  { link: "Register", href: "/registers" },
 ];
 export const intialLinksHome = [
-  { link: "upload", href: "/upload" },
-  { link: "registers", href: "/registers" },
+  { link: "Upload", href: "/upload" },
+  { link: "Register", href: "/registers" },
+  { link: "Login", href: "/login" },
 ];
 export const intialLinksFooter = [
   { link: "https://www.instagram.com/" },
