@@ -10,6 +10,7 @@ import {
   fetchLoginPagePost,
   searchFetchProducts,
   fetchFindAllUsers,
+  searchFetchUsers,
   fetchUsersDelete,
 } from "../helpers/constantes";
 
@@ -79,6 +80,7 @@ export default function ProviderCards({ children }) {
   const handdleSearchClick = async ({ target }) => {
     console.log("Busqueda...", search);
     searchFetchProducts(search).then((res) => setProduct(res));
+    searchFetchUsers(search).then((res) => setUser(res));
   };
 
   //Delete Product for id

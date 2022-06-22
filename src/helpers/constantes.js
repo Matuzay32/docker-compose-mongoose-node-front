@@ -144,3 +144,12 @@ export const fetchUsersDelete = async (id) => {
   const data = res.json();
   return data;
 };
+
+//FETCH FIND USER FOR QUERY
+export const searchFetchUsers = async (search) => {
+  const res = await fetch(
+    `http://localhost:5000/users/findUsersByEmail?emailSearch=${search}`
+  );
+  const data = await res.json();
+  return data;
+};
