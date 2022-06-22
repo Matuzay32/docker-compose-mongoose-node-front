@@ -73,6 +73,7 @@ export default function ProviderCards({ children }) {
 
   //Esta funcion la uso en el header para obtener el value del input
   const handdleSearch = ({ target }) => {
+    console.log(target.value);
     setSearch(target.value);
   };
 
