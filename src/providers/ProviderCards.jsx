@@ -9,11 +9,15 @@ import {
   fetchRegisterPagePost,
   fetchLoginPagePost,
   searchFetchProducts,
+  fetchFindAllUsers,
+  fetchUsersDelete,
 } from "../helpers/constantes";
 
 export default function ProviderCards({ children }) {
   //ESTADO DE TODOS LOS PRODUCTOS
   const [product, setProduct] = useState([{}]);
+  //ESTADO DE TODOS LOS USUARIOS
+  const [user, setUser] = useState([{}]);
 
   //BUSQUEDA POR AHORA DE PRODUCTOS
   const [search, setSearch] = useState("");
@@ -26,6 +30,13 @@ export default function ProviderCards({ children }) {
   //DATOS FORM DE RegisterPage
   const [datosFormPageRegister, setDatosFormFormPageRegister] = useState({});
   const [formDataPageRegister, setFormDataPageRegister] = useState({});
+
+  //DELETE USER FOR ID
+  const deleteUserForId = (id) => {
+    console.log(id, "este es mi id");
+    fetchUsersDelete(id).then((x) => console.log(x));
+    fetchFindAllUsers().then((res) => setUser(res));
+  };
 
   //LOGIN
   const sendFormDataLoginPage = (e) => {
@@ -100,6 +111,9 @@ export default function ProviderCards({ children }) {
   return (
     <ContextCards.Provider
       value={{
+        deleteUserForId,
+        user,
+        setUser,
         searchFetchProducts,
         sendFormDataLoginPage,
         formDataRegisterPageFunction,

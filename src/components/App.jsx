@@ -4,6 +4,7 @@ import {
   intialLinksHeader,
   intialLinksFooter,
   fetchProducts,
+  fetchFindAllUsers,
   // initailsProducts,
 } from "../helpers/constantes";
 import ContextCards from "../context/ContextCards";
@@ -16,13 +17,13 @@ import PageNotFound from "./PageNotFound.jsx";
 import UsersPage from "../pages/UsersPage";
 
 export default function App() {
-  const context = useContext(ContextCards);
-  const { product, setProduct } = context;
+  const { product, setProduct, user, setUser } = useContext(ContextCards);
   const [linksHeader, setlinksHeader] = useState(intialLinksHeader);
   const [linksFooter, setlinksFooter] = useState(intialLinksFooter);
 
   useEffect(() => {
     fetchProducts().then((x) => setProduct(x));
+    fetchFindAllUsers().then((x) => setUser(x));
 
     return () => {};
   }, []);

@@ -123,3 +123,24 @@ export const fetchLoginPagePost = async (datos) => {
 
   return data;
 };
+
+//Fetch all Users
+export const fetchFindAllUsers = async () => {
+  const res = await fetch(`http://localhost:5000/users/allUsers`);
+  const datos = await res.json();
+  return await datos;
+};
+
+//FETCH DELETE USER
+export const fetchUsersDelete = async (id) => {
+  const res = await fetch(`http://localhost:5000/users/id/${id}`, {
+    method: "DELETE",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      // token: JSON.parse(await ObtenerTokenLocalStorage())?.token,
+    },
+  });
+  const data = res.json();
+  return data;
+};

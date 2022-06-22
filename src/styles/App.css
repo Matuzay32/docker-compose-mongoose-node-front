@@ -175,7 +175,8 @@ header > ul > li :hover {
 .cardSection {
   width: 100%;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -545,7 +546,7 @@ h4 {
 }
 .containerTable > table {
   color: var(--cardColor);
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   font-family: "Lato", sans-serif;
   font-weight: 600;
   width: 100%;
