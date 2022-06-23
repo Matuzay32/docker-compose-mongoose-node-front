@@ -1,15 +1,11 @@
-version: "3.7"
+version: "3"
 
 services:
-  sample:
-    container_name: front-react-container
-    build:
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - ".:/app"
-      - "/app/node_modules"
+  web:
+    container_name: frontExample
+    restart: always
+    build: .
     ports:
-      - 3001:3000
-    environment:
-      - CHOKIDAR_USEPOLLING=true
+      - "4000:3000"
+    volumes:
+      - .:/usr/src/app
